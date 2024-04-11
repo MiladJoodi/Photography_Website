@@ -73,8 +73,11 @@
     @apply text-[22px] font-semibold;
   }
   .subtitle{
-    @apply text-muted-foreground text-lg mb-8 font-light;
+    @apply text-muted-foreground text-2xl mb-8 font-light;
   }
   .section-title{
     @apply text-4xl text-primary font-bold relative w-max flex items-center justify-between gap-x-3;
+  }
+  .badge{
+    @apply flex z-10 w-[250px] px-16 h-[90px] bg-primary dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-full items-center gap-x-4;
   }
