@@ -4,6 +4,15 @@ import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Footer from "@/components/Footer";
 
+// import Font
+import { Sen } from "next/font/google";
+
+const Senfont = Sen({
+  subsets: ['latin'],
+  weght: ["400", "500", "600", "700"],
+  display: "swap"
+})
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -14,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressContentEditableWarning>
-      <body className={inter.className}>
+      <body className={Senfont.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <Header />
           {children}
