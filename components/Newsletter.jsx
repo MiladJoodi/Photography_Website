@@ -1,7 +1,7 @@
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { RiMenFill } from "react-icons/ri";
-import { CalendarDaysIcon } from "@heroicons/react/24/outline";
+import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const Newsletter = () => {
@@ -37,12 +37,32 @@ const Newsletter = () => {
                     </div>
                 </div>
 
+            {/* Articles */}
                 <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
-                    <div>
-                        <div>
-                            <CalendarDaysIcon className="h-6 w-6" />
+                  {/* 1 */}
+                    <div className="flex flex-col items-start">
+                        <div className="bg-primary p-2 ring-1 ring-white/10 rounded-full">
+                            <CalendarDaysIcon className="h-6 w-6 text-white" />
                         </div>
+
+                        <dt className="mt-4 font-semibold text-muted-foreground">Weekly articles</dt>
+                          <dd className="mt-2 leading-7">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quia veniam illum veritatis delectus adipisci, sint quibusdam similique nobis nesciunt ipsa explicabo error dolorem eos, in reiciendis corporis perferendis atque!
+                          </dd>
                     </div>
+                  {/* 2 */}
+                  <div className="flex flex-col items-start">
+                        <div className="bg-primary p-2 ring-1 ring-white/10 rounded-full">
+                            <HandRaisedIcon className="h-6 w-6 text-white" />
+                        </div>
+
+                        <dt className="mt-4 font-semibold text-muted-foreground">Full Security</dt>
+                          <dd className="mt-2 leading-7">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quia veniam illum veritatis delectus adipisci, sint quibusdam similique nobis nesciunt ipsa explicabo error dolorem eos, in reiciendis corporis perferendis atque!
+                          </dd>
+                    </div>
+
+
                 </dl>
 
           </div>
