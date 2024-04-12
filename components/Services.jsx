@@ -1,3 +1,7 @@
+"use client"
+// React Awesome Reveal
+import { Fade } from "react-awesome-reveal";
+
 import { Smile, Scan, Bird } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -23,10 +27,13 @@ const Services = () => {
     return (
         <section className='mb-12 xl:mb-36'>
             <div className='container mx-auto'>
+            <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
                 <h2 className='section-title mb-6 xl:mb-24 text-center mx-auto'>Our Services</h2>
+          </Fade>
 
                 {/* Category Items */}
                 <div className='grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8'>
+                <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
                     {
                         servicesData.map((item, index)=>{
                             return (
@@ -50,6 +57,7 @@ const Services = () => {
                             )
                         })
                     }
+                              </Fade>
                 </div>
 
             </div>

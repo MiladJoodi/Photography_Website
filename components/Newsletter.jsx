@@ -1,3 +1,7 @@
+"use client"
+// React Awesome Reveal
+import { Fade } from "react-awesome-reveal";
+
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { RiMenFill } from "react-icons/ri";
@@ -11,16 +15,19 @@ const Newsletter = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
             <div className="max-w-xl lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight section-title sm:text-4xl">
-              Need a Photographer?
-            </h2>
-            <p className="mt-4 text-lg leading-8 subtitle">
+            <Fade direction="left" delay={400} cascade damping={1e-1} triggerOnce={true}>
+              <h2 className="text-3xl font-bold tracking-tight section-title sm:text-4xl">Need a Photographer?</h2>
+          </Fade>
+          <Fade direction="left" delay={600} cascade damping={1e-1} triggerOnce={true}>
+          <p className="mt-4 text-lg leading-8 subtitle">
               But I must explain to you how all this mistaken idea of denouncing
               pleasure and praising pain was born and I will give you a complete
               account of the system.
             </p>
-
-                <div className="mt-6 flex max-w-md gap-x-4">
+          </Fade>
+            
+          <Fade direction="left" delay={800} cascade damping={1e-1} triggerOnce={true}>
+          <div className="mt-6 flex max-w-md gap-x-4">
                     <Input 
                     id="email-address"
                     name="email"
@@ -35,11 +42,15 @@ const Newsletter = () => {
                         </Button>
                     </Link>
                     </div>
+          </Fade>
+
+                
                 </div>
 
             {/* Articles */}
                 <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
-                  {/* 1 */}
+                <Fade direction="right" delay={400} cascade damping={1e-1} triggerOnce={true}>
+                    {/* 1 */}
                     <div className="flex flex-col items-start">
                         <div className="bg-primary p-2 ring-1 ring-white/10 rounded-full">
                             <CalendarDaysIcon className="h-6 w-6 text-white" />
@@ -50,7 +61,10 @@ const Newsletter = () => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quia veniam illum veritatis delectus adipisci, sint quibusdam similique nobis nesciunt ipsa explicabo error dolorem eos, in reiciendis corporis perferendis atque!
                           </dd>
                     </div>
-                  {/* 2 */}
+                </Fade>
+                
+                <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
+                   {/* 2 */}
                   <div className="flex flex-col items-start">
                         <div className="bg-primary p-2 ring-1 ring-white/10 rounded-full">
                             <HandRaisedIcon className="h-6 w-6 text-white" />
@@ -61,7 +75,7 @@ const Newsletter = () => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quia veniam illum veritatis delectus adipisci, sint quibusdam similique nobis nesciunt ipsa explicabo error dolorem eos, in reiciendis corporis perferendis atque!
                           </dd>
                     </div>
-
+                </Fade>
 
                 </dl>
 

@@ -1,4 +1,6 @@
 "use client"
+// React Awesome Reveal
+import { Fade } from "react-awesome-reveal";
 
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { Button } from '@/components/ui/button';
@@ -22,22 +24,29 @@ const Pricing = () => {
   return (
     <section className="min-h-screen pt-12">
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
+      <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
+          <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
           My Pricing
         </h2>
+          </Fade>
+        
 
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Memories worth love cherishing
-          </h2>
+        <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Memories worth love cherishing</h2>
+          </Fade>
+          <Fade direction="up" delay={800} cascade damping={1e-1} triggerOnce={true}>
           <p className="mt-6 text-lg leading-8">
             Create the memories & celebrate the magic with Solence - a
             beautifully designed wedding photography theme that has it all.
           </p>
+        </Fade>
+          
         </div>
 
         {/* Pricing Data */}
-        <div className="mx-auto mt-16 max-w-2xl ring-1 ring-gray-200 rounded-3xl sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+        <Fade direction="up" delay={1000} cascade damping={1e-1} triggerOnce={true}>
+          <div className="mx-auto mt-16 max-w-2xl ring-1 ring-gray-200 rounded-3xl sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
           {/* Left Section */}
           <div className="p-8 sm:p-10 lg:flex-auto">
             <h3 className="text-2xl font-bold tracking-tight">Lifetime Membership</h3>
@@ -105,6 +114,8 @@ const Pricing = () => {
             </div>
           </div>
         </div>
+        </Fade>
+        
       </div>
     </section>
   );

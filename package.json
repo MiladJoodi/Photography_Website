@@ -26,6 +26,7 @@
     "next-theme": "^0.1.5",
     "next-themes": "^0.3.0",
     "react": "^18",
+    "react-awesome-reveal": "^4.2.8",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
     "react-hook-form": "^7.51.2",

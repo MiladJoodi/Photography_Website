@@ -1,3 +1,7 @@
+"use client"
+// React Awesome Reveal
+import { Fade } from "react-awesome-reveal";
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
 
 const Faq = () => {
@@ -5,12 +9,16 @@ const Faq = () => {
         <section>
             <div className="container mx-auto">
                 <div className="w-full pt-12 mb-6 xl:mb-24">
+                <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
                     <h2 className="section-title mb-12 text-center mx-auto">
                         Our Studio
                     </h2>
+                </Fade>
+                    
 
                     <div>
-                        {/* Accordion */}
+                    <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
+                           {/* Accordion */}
                         <Accordion type="single" collapsible className="w-full">
                             <AccordionItem value="item-1">
                                 <AccordionTrigger>
@@ -43,6 +51,8 @@ const Faq = () => {
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
+                    </Fade>
+                        
                     </div>
 
                 </div>

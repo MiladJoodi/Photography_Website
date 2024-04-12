@@ -1,4 +1,6 @@
-"use client";
+"use client"
+// React Awesome Reveal
+import { Fade } from "react-awesome-reveal";
 
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image";
@@ -59,12 +61,15 @@ const Reviews = () => {
   return (
     <section className="mb-12 xl:mb-32">
       <div className="container mx-auto">
-        <h2 className="section-title mb-12 text-center mx-auto">
-          They say about out work
-        </h2>
-
+      <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
+            <h2 className="section-title mb-12 text-center mx-auto">
+            They say about out work
+            </h2>
+       </Fade>
+      
         {/* Slider */}
-        <Swiper
+        <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
+          <Swiper
             slidesPerView={1}
             breakpoints={{
                 640: { slidesPerView: 2 },
@@ -109,6 +114,8 @@ const Reviews = () => {
                 })
             }
           </Swiper>
+            </Fade>
+        
         {/* Slider */}
 
       </div>

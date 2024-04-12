@@ -1,4 +1,7 @@
 "use client"
+// React Awesome Reveal
+import { Fade } from "react-awesome-reveal";
+
 import ProjectCard from "@/components/ProjectCard";
 import {Tabs, TabsList, TabsContent, TabsTrigger} from '@/components/ui/tabs'
 import { useState } from "react";
@@ -99,6 +102,9 @@ const PortfolioTabs = () => {
 
     return (
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
+            <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
+          
+         
             <TabsList className="w-full grid h-full md:grid-cols-4 lg:max-w-[740px] mb-12 mx-auto md:border dark:border-none">
                 {
                     categories.map((category, index)=>(
@@ -113,9 +119,11 @@ const PortfolioTabs = () => {
                     ))
                 }
             </TabsList>
+             </Fade>
 
             {/* Tab Content */}
                 <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
                         {
                             filteredProjects.map((project, index)=> {
                                 return (
@@ -125,6 +133,7 @@ const PortfolioTabs = () => {
                                 )
                             })
                         }
+                </Fade>
                 </div>
 
         </Tabs>

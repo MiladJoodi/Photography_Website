@@ -1,6 +1,11 @@
+"use client"
+
 import Link from "next/link";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+
+// React Awesome Reveal
+import { Fade } from "react-awesome-reveal";
 
 // Import Icons
 import { RiMenFill, RiBookmark3Fill, RiBodyScanFill, RiServiceFill } from "react-icons/ri";
@@ -15,17 +20,27 @@ const Hero = () => {
         <div className="flex justify-between gap-x-8">
           {/* Left Side Content */}
           <div className="flex max-w-[800px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-            <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
-              Photography
-            </div>
-            <h1 className="h1 uppercase">Let{"'"}s make magic !</h1>
-            <p className="subtitle max-w-[590px] mt-4 mx-auto xl:mx-0">
-              We are fine art, nature & portrait fil, photographers from San
-              Francisco, with a special love for natural light, medium format
-              film cameras & redheads with freckles.
-            </p>
 
-            {/* Subcribe Button */}
+            <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
+                <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
+                   Photography
+                </div>
+            </Fade>
+
+            <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
+            <h1 className="h1 uppercase">Let{"'"}s make magic !</h1>
+            </Fade>
+
+            <Fade direction="up" delay={800} cascade damping={1e-1} triggerOnce={true}>
+                <p className="subtitle max-w-[590px] mt-4 mx-auto xl:mx-0">
+                We are fine art, nature & portrait fil, photographers from San
+                Francisco, with a special love for natural light, medium format
+                film cameras & redheads with freckles.
+                </p>
+            </Fade>
+            
+            <Fade direction="up" delay={1000} cascade damping={1e-1} triggerOnce={true}>
+           {/* Subcribe Button */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x3 xl:mx-0 mb-12">
               <div className="flex w-full gap-x-4">
                 <label htmlFor="email-address" className="sr-only">
@@ -39,28 +54,37 @@ const Hero = () => {
                 </Link>
               </div>
             </div>
+            </Fade>
 
+            <Fade direction="up" delay={1200} cascade damping={1e-1} triggerOnce={true}>
             {/* Social Icons - left */}
             <Socials
               containerStyles="flex gap-x-6 mx-auto xl:mx-0"
               iconStyles="text-foreground text-[22px] hover:text-primary transition-all"
             />
+          </Fade>
+
           </div>
 
-          {/* Banner Image */}
+          <Fade direction="right" delay={600} cascade damping={1e-1} triggerOnce={true}>
           <div className="hidden xl:flex relative">
             <HeroImg
               imgSrc="/about/photography.svg"
               containerStyles="w-[550px] h-[475px] bg-no-repeat relative bg-bottom"
             />
           </div>
+          </Fade>
+          {/* Banner Image */}
+          
         </div>
 
         {/* Badge Section */}
         <div className="py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-              {/* Badge 1 */}
+
+            <Fade direction="up" delay={800} cascade damping={1e-1} triggerOnce={true}>
+          {/* Badge 1 */}
               <div className="mx-auto flex max-w-xs flex-col gap-y-4">
                 <dt className="text-base leading-7 text-muted-foreground">
                   Years Of Experince
@@ -104,6 +128,8 @@ const Hero = () => {
                   />
                 </dd>
               </div>
+          </Fade>
+              
 
 
             </dl>
