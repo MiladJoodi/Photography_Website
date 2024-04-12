@@ -82,3 +82,9 @@
   .badge{
     @apply flex z-10 w-[250px] px-16 h-[90px] bg-primary dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-full items-center gap-x-4;
   }
+
+  .swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet, 
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet{
+    @apply bg-primary
+  }
