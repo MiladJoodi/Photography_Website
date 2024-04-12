@@ -1,5 +1,12 @@
+"use client"
+
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { Button } from '@/components/ui/button';
+
+// Import Toast Message
+import { ToastAction } from '@/components/ui/toast';
+import { useToast } from "@/components/ui/use-toast"
+
 
 const includedFeatures = [
     'Private forum access',
@@ -9,6 +16,9 @@ const includedFeatures = [
 ]
 
 const Pricing = () => {
+
+    const { toast } = useToast()
+
   return (
     <section className="min-h-screen pt-12">
       <div className="container mx-auto">
@@ -64,14 +74,33 @@ const Pricing = () => {
           </div>
 
           {/* Right Section */}
-          <div>
-            <div>
-              <div>
-                <p>pay once, own it forever</p>
-                <p>
-                  <span>$349</span>
-                  <span>USD</span>
+          <div className='-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0'>
+            <div className='bg-tertiary py-10 rounded-2xl text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16'>
+              <div className='mx-auto mx-w-xs px-8'>
+                <p className='txt-base font-semibold'>pay once, own it forever</p>
+                <p className='mt-6 flex items-baseline justify-center gap-x-2'>
+                  <span className='text-5xl font-bold tracking-tight'>$349</span>
+                  <span className='text-sm font-semibold leading-6 tracking-wide'>USD</span>
                 </p>
+
+                <Button className="gap-x-2 mt-3"
+                onClick={()=>{
+                    toast({
+                        title: "Purchase Successfully",
+                        description: "Friday, February 10, 2024 at 5:57 PM",
+                        action:(
+                            <ToastAction altText="Close">Close</ToastAction>
+                        )
+                    })
+                }}
+                >
+                    Purchase
+                </Button>
+
+                <p className='mt-6 text-xs leading-5'>
+                    Invoices and recipts available for easy company reimbursement
+                </p>
+
               </div>
             </div>
           </div>

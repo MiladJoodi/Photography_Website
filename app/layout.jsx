@@ -4,6 +4,10 @@ import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Footer from "@/components/Footer";
 
+// Add Toast Message
+import { Toaster } from "@/components/ui/toaster"
+
+
 // import Font
 import { Sen } from "next/font/google";
 
@@ -28,6 +32,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
