@@ -1,5 +1,5 @@
 import HeroImg from "@/components/HeroImg";
-import { RiRidingFill, RiUserHeartFill, RiStraHalfSLine, RiVidiconFill, RiVipCrown2Fill, RiSendPlaneFill } from "react-icons/ri";
+import { RiRidingFill, RiUserHeartFill,RiStarHalfSLine, RiVidiconFill, RiVipCrown2Fill, RiSendPlaneFill } from "react-icons/ri";
 
 const infoData = [
     {
@@ -19,7 +19,7 @@ const infoData = [
         text: 'Born on 23 Jan, 2000',
     },
     {
-        icon: <RiStraHalfSLine size={20} />,
+        icon: <RiStarHalfSLine size={20} />,
         text: 'Master Degree',
     },
     {
@@ -30,15 +30,15 @@ const infoData = [
 
 const About = () => {
     return (
-        <section className="lb-12 xl:py-24">
+        <section className="pb-12 min-h-screen xl:py-24">
             <div className="container mx-auto">
                 <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About me</h2>
 
                 <div className="flex flex-col xl:flex-row">
                     {/* Image */}
-                    <div>
+                    <div className="relative flex-1 xl:flex">
                         <HeroImg 
-                        containerStyles="w-[505px] h-[505px] bg-no-repeat relative"
+                        containerStyles="w-[405px] h-[405px] lg:w-[505px] lg:h-[505px] bg-no-repeat relative"
                         imgSrc="/about/profile.png"
                         />
                     </div>
@@ -50,6 +50,23 @@ const About = () => {
                                 <h3 className="h3 mb-4">Lets plan your perfect photoshoot</h3>
                                 <p className="subtitle max-w-xl mx-auto xl:mx-0">Our mission is to further develop the overall excellence of photography and to capture memories that will be cherished for a lifetime, in the timeless photographs.</p>
                                 <p className="subtitle max-w-xl mx-auto xl:mx-0">Perfessional photography services combine the classic knowledge of traditional photographic portraiture and contemporary style</p>
+                            
+                                    {/* Icons*/}
+                                    <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                                        {
+                                            infoData.map((item,index)=>{
+                                                return (
+                                                    <div 
+                                                    className="flex item-center gap-x-4 mx-auto xl:mx-0"
+                                                    key={index}>
+                                                        <div className="text-primary">{item.icon}</div>
+                                                        <div>{item.text}</div>
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                    </div>
+
                             </div>
                         </div>
                     </div>
