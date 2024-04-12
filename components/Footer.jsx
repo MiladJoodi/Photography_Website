@@ -23,6 +23,9 @@ const Footer = () => {
                     <div className="text-white">
                         Copyright &copy; 2024, All Right Reservd.
                     </div>
+                    <div className="text-white">
+                        <a href="https://github.com/MiladJoodi/Photography_Website">Made with ❤️</a>
+                    </div>
                     </Fade> 
                 </div>
             </div>
